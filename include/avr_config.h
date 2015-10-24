@@ -34,7 +34,9 @@ namespace avrstl {
 // alloc-ahead additional memory increment for strings. The default SGI implementation will add
 // the old size, doubling memory each time. We don't have memory to burn, so add 20 types each time
 
-	template<typename T> size_t AvrStringAllocAheadIncrement(size_t oldSize_) { return 20; }
+	template<typename T> size_t AvrStringAllocAheadIncrement(size_t oldSize_ __attribute__((unused))) {
+        return 20;
+    }
 }
 
 

@@ -28,16 +28,9 @@
 #define __SGI_STL_NUMERIC
 
 #include <stl_config.h>
+#include <ios>
 #include <stl_relops.h>
 #include <stddef.h>
-
-#ifndef __AVR__
-#ifdef __STL_USE_NEW_IOSTREAMS 
-#include <iosfwd>
-#else /* __STL_USE_NEW_IOSTREAMS */
-#include <iostream.h>
-#endif /* __STL_USE_NEW_IOSTREAMS */
-#endif
 
 #include <stl_iterator_base.h>
 #include <stl_iterator.h>

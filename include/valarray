@@ -15,7 +15,7 @@
 #define __SGI_STL_VALARRAY
 
 #ifdef __AVR__
-#include <new.h>
+#include <new>
 #undef round
 #undef abs
 #else

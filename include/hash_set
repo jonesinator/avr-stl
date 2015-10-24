@@ -27,6 +27,8 @@
 #ifndef __SGI_STL_HASH_SET
 #define __SGI_STL_HASH_SET
 
+#include <stl_config.h>
+#include <ios>
 #ifndef __SGI_STL_INTERNAL_HASHTABLE_H
 #include <stl_hashtable.h>
 #endif 

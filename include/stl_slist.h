@@ -304,7 +304,7 @@ _Slist_base<_Tp,_Alloc>::_M_erase_after(_Slist_node_base* __before_first,
     _Slist_node<_Tp>* __tmp = __cur;
     __cur = (_Slist_node<_Tp>*) __cur->_M_next;
     destroy(&__tmp->_M_data);
-    _M_put_node(__tmp);
+    this->_M_put_node(__tmp);
   }
   __before_first->_M_next = __last_node;
   return __last_node;

@@ -27,7 +27,7 @@ struct _ERROR_IN_STL_SEQ {
 
   template <class _XX>
   static void
-  __fill_constructor_requirement_violation(_XX& __s) {
+  __fill_constructor_requirement_violation(_XX& __s __attribute__ ((unused))) {
     typename _XX::value_type __t = typename _XX::value_type();
     typename _XX::difference_type __n = typename _XX::difference_type();
     _XX __x(__n, __t);

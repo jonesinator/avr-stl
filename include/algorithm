@@ -27,6 +27,8 @@
 #ifndef __SGI_STL_ALGORITHM
 #define __SGI_STL_ALGORITHM
 
+#include <stl_config.h>
+#include <ios>
 #include <stl_algobase.h>
 #include <stl_construct.h>
 #include <stl_uninitialized.h>

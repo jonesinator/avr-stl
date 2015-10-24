@@ -21,6 +21,7 @@
 #include <exception>
 #endif
 
+#include <stl_config.h>
 #include <ios>
 
 #ifndef __STD_IOMANIP

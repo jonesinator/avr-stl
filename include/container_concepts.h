@@ -208,8 +208,8 @@ _const_ReversibleContainer_requirement_violation(_ReversibleContainer __c) {
   _ERROR_IN_STL_CONTAINER::__rbegin_iterator_accessor_requirement_violation(__c);
   _ERROR_IN_STL_CONTAINER::__rend_iterator_accessor_requirement_violation(__c);
   // Requirements on Iterators
-  typedef typename _ReversibleContainer::iterator iter;
-  typedef typename _ReversibleContainer::const_iterator const_iter;
+  typedef typename _ReversibleContainer::iterator iter __attribute__ ((unused));
+  typedef typename _ReversibleContainer::const_iterator const_iter __attribute__ ((unused));
   
   // This line won't compile on gcc 2.91 due to a compiler bug
   // Doesn't seem happy on avr-gcc 4.5.1 either

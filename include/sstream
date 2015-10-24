@@ -22,6 +22,7 @@
 #ifndef HEADER_STD_SSTREAM
 #define HEADER_STD_SSTREAM 1
 
+#include <stl_config.h>
 #include <iosfwd>
 #include <ios>
 #include <istream>

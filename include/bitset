@@ -224,9 +224,11 @@ void _Base_bitset<_Nw>::_M_do_right_shift(size_t __shift)
 template<size_t _Nw>
 unsigned long _Base_bitset<_Nw>::_M_do_to_ulong() const
 {
-  for (size_t __i = 1; __i < _Nw; ++__i) 
-    if (_M_w[__i]) 
+  for (size_t __i = 1; __i < _Nw; ++__i) {
+    if (_M_w[__i]) {
       __STL_THROW(overflow_error("bitset"));
+    }
+  }
   
   return _M_w[0];
 }
@@ -529,8 +531,9 @@ public:
                   size_t __pos = 0)
     : _Base() 
   {
-    if (__pos > __s.size()) 
+    if (__pos > __s.size()) {
       __STL_THROW(out_of_range("bitset"));
+    }
     _M_copy_from_string(__s, __pos,
                         basic_string<_CharT, _Traits, _Alloc>::npos);
   }
@@ -540,8 +543,9 @@ public:
          size_t __n)
     : _Base() 
   {
-    if (__pos > __s.size()) 
+    if (__pos > __s.size()) {
       __STL_THROW(out_of_range("bitset"));
+    }
     _M_copy_from_string(__s, __pos, __n);
   }
 #else /* __STL_MEMBER_TEMPLATES */
@@ -627,15 +631,17 @@ public:
   }
 
   bitset<_Nb>& set(size_t __pos) {
-    if (__pos >= _Nb)
+    if (__pos >= _Nb) {
       __STL_THROW(out_of_range("bitset"));
+    }
 
     return _Unchecked_set(__pos);
   }
 
   bitset<_Nb>& set(size_t __pos, int __val) {
-    if (__pos >= _Nb)
+    if (__pos >= _Nb) {
       __STL_THROW(out_of_range("bitset"));
+    }
 
     return _Unchecked_set(__pos, __val);
   }
@@ -646,8 +652,9 @@ public:
   }
 
   bitset<_Nb>& reset(size_t __pos) {
-    if (__pos >= _Nb)
+    if (__pos >= _Nb) {
       __STL_THROW(out_of_range("bitset"));
+    }
 
     return _Unchecked_reset(__pos);
   }
@@ -659,8 +666,9 @@ public:
   }
 
   bitset<_Nb>& flip(size_t __pos) {
-    if (__pos >= _Nb)
+    if (__pos >= _Nb) {
       __STL_THROW(out_of_range("bitset"));
+    }
 
     return _Unchecked_flip(__pos);
   }
@@ -712,8 +720,9 @@ public:
   }
 
   bool test(size_t __pos) const {
-    if (__pos > _Nb)
+    if (__pos > _Nb) {
       __STL_THROW(out_of_range("bitset"));
+    }
 
     return _Unchecked_test(__pos);
   }
