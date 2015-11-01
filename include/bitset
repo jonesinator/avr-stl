@@ -374,6 +374,11 @@ __STL_TEMPLATE_NULL struct _Base_bitset<1> {
 
 };
 
+// FIXME
+// Multiple definition errors if including this header in multiple translation
+// units. Don't care very much though since I probably will never use these
+// specializations.
+#if 0
 //
 // Definitions of non-inline functions from the single-word version of
 //  _Base_bitset.
@@ -430,7 +435,7 @@ size_t _Base_bitset<1>::_M_do_find_next(size_t __prev, size_t __not_found ) cons
   // not found, so return a value that indicates failure.
   return __not_found;
 } // end _M_do_find_next
-
+#endif
 
 // ------------------------------------------------------------
 // Helper class to zero out the unused high-order bits in the highest word.
