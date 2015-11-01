@@ -53,10 +53,24 @@ template <class T> inline void copy(T* source,T* destination,int n) {
 
 
 struct __true_type {
+    static constexpr bool value = true;
 };
 
 struct __false_type {
+    static constexpr bool value = false;
 };
+
+template<bool B, class T = void>
+struct enable_if {};
+
+template<class T>
+struct enable_if<true, T> { typedef T type; };
+
+template<class T, class U>
+struct is_same : __false_type {};
+
+template<class T>
+struct is_same<T, T> : __true_type {};
 
 template <class _Tp>
 struct __type_traits { 
